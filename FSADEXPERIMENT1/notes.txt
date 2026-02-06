@@ -1,0 +1,2 @@
+This is notes.txt file for Git lab.
+Feature update added.
