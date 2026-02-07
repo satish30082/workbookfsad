@@ -1,5 +1,9 @@
-package com.klu.student;
+package com.klu;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component   // For Annotation DI
 public class Student {
 
     private int studentId;
@@ -8,7 +12,12 @@ public class Student {
     private int year;
 
     // Constructor Injection
-    public Student(int studentId, String name, String course, int year) {
+    public Student(
+            @Value("101") int studentId,
+            @Value("Satish") String name,
+            @Value("Java Full Stack") String course,
+            @Value("2026") int year) {
+
         this.studentId = studentId;
         this.name = name;
         this.course = course;
@@ -24,6 +33,7 @@ public class Student {
         this.year = year;
     }
 
+    // Display Method
     public void display() {
         System.out.println("Student ID : " + studentId);
         System.out.println("Name       : " + name);
