@@ -40,7 +40,6 @@ public class MainApp {
 
         System.out.println("Inserted Successfully!");
 
-        // FETCH
 
         session = HibernateUtil.getSessionFactory().openSession();
 
