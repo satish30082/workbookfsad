@@ -11,7 +11,7 @@ public class Student {
     private String gender;
 
     @Autowired
-    private Certification certification; // Autowired Object
+    private Certification certification;
 
     public Student() {
         this.id = 101;
